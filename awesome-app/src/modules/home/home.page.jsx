@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { FaStopwatch, FaGamepad, FaCameraRetro, FaAtlas } from "react-icons/fa";
 import MenuButtonComponent from "../../components/menu-button/menu-button.component";
+import ChangeLayoutButton from '../../components/change-layout-button/change-layout-button.component'
 
 const menuButtons = [
   {
@@ -30,8 +31,10 @@ class HomePage extends React.Component {
   render() {
     return (
       <StyledContainer>
-        {menuButtons.map(menu => (
+        <ChangeLayoutButton />
+        {menuButtons.map((menu, index) => (
           <MenuButtonComponent
+            key={index}
             Icon={menu.icon}
             path={menu.path}
             title={menu.title}
@@ -44,10 +47,9 @@ class HomePage extends React.Component {
 
 const StyledContainer = styled.div`
   align-items: center;
-  background-image: linear-gradient(to top right, #cca355, pink);
   display: flex;
   height: 100vh;
   justify-content: space-evenly;
-`
+`;
 
 export default HomePage;

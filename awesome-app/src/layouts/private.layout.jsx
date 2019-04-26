@@ -6,7 +6,7 @@ const MainLayout = ({ children }) => (
 )
 
 const StyledContainer = styled.div`
-    background: linear-gradient(to top right, #893, #398);
+    background: linear-gradient(to top right, #cca355, pink);
 `
 
 export default MainLayout
